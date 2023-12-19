@@ -1,5 +1,10 @@
 import type { Config } from 'tailwindcss'
 
+const safelist = [
+  'animate-fade-in-up',
+  // Add other animation classes as needed
+];
+
 const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -15,6 +20,7 @@ const config: Config = {
       },
     },
   },
+  safelist,
   plugins: [],
 }
 export default config
